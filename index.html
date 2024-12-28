@@ -1,33 +1,142 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>康文昌的在线HTML 教学小工具</title>
-    <style>  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
       body {
-        margin: 0;
+        background-image: url("bg.jpg");
+        background-size: cover;
+        margin: 0px;
+        flex-direction: column;
+        overflow: auto;
+        height: 100%;
+        background-attachment: fixed;
+        background-position: bottom;
+      }
+      * {
+        border: 0px solid black;
+      }
+      .sys {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        background-color: rgba(211, 210, 210, 0);
+      }
+      .xys {
+        display: flex;
+
+        overflow: auto;
+        justify-content: space-around;
+        background-color: rgba(243, 242, 242, 0);
+      }
+      .flex {
+        display: flex;
+      }
+      .f1 {
+        flex: 1;
+      }
+      .xysn {
+        margin: 20px;
+        padding: 20px;
+        height: 20vh;
+        width: 30vh;
+        background-color: rgba(211, 211, 211, 0);
+      }
+      .avatar {
+        width: 10vh; /* 设置圆形图片的宽和高 */
+        height: 15vh; /* 圆形图像必须相同的宽高 */
+        border-radius: 50%; /* 设置圆形 */
+        display: flex; /* 使用flex布局 */
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        overflow: hidden; /* 超出部分隐藏 */
+      }
+      .avatar img {
+        width: 100%; /* 自适应宽度填满 */
+        height: auto; /* 保持图片的比例 */
+      }
+      .container {
+        text-align: center; /* 确保文本水平居中 */
+        width: 80%; /* 设置容器宽度 */
+      }
+      p {
+        font-size: 20px; /* 设置字体大小 */
+        font-style: italic; /* 设置字体风格 */
+        color: #b44d2b;
       }
     </style>
   </head>
-  <body>
-    <div style="background-color: ;
- text-align: center; padding:40px">
-      <img src="https://img.imgdd.com/f210f3.b08f583e-1946-472f-ac94-5b1c740d8cdf.webp" alt="aad3f38bbfba0abdf35ee8864db40509290750052.jpg@1192w.webp"width="80"></div>
-    <div style="text-align:center;
-    max-width:700px;
-    margin:30px auto;
-    padding:15px;
-    line-height:1.7;">
-      <p>我的网站</p>
-      <p>我的网站</p>
-      <p>我的网站</p></div>
-    <div style="background-color: ;
- text-align: center; 
- padding:40px ;
- font-size:12px;">
- <p>我的网站</p>
+  <body class="flex" style="margin-left: 15vh; margin-right: 15vh">
+    <!-- 上半部分-->
+    <div
+      class="sys"
+      style="height: 60vh; align-items: center; justify-content: center"
+    >
+      <!-- 导航栏-->
+      <div style="width: 100vh">
+        <div
+          style="
+            background-color: rgba(211, 211, 211, 0);
+            height: 15vh;
+            justify-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div class="avatar">
+            <img src="ss.jpg" alt="头像" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 介绍栏-->
+      <div
+        class="f1 container"
+        style="
+          height: 20vh;
+          width: 40vh;
+          align-items: center;
+          justify-content: center;
+          background-color: rgba(6, 46, 168, 0.3);
+        "
+      >
+        <p style="text-align: center; margin: 10vh">
+          欢迎来到我的网站， 现在这个网站还是比较的简陋，
+          后续应该也许大概会慢慢完善的！
+        </p>
+      </div>
     </div>
-  
+    <!-- 下半部分-->
+    <div class="xys f1">
+      <!-- 内容栏-->
+      <div class="xysn">
+        <p style="font-size: 15px; color: black; font-weight: 900">
+          当前还没有什么计划和内容，先把这个网站完成了再说。
+        </p>
+      </div>
+      <div class="xysn">
+        <p style="font-size: 15px; color: rgb(7, 7, 7); font-weight: 900">
+          发现问题解决问题，学习这样就足以。
+        </p>
+      </div>
+    </div>
+    <div class="xys f1">
+      <!-- 内容栏-->
+      <div class="xysn"></div>
+      <div class="xysn"></div>
+    </div>
+    <div class="xys f1">
+      <!-- 内容栏-->
+      <div class="xysn"></div>
+      <div class="xysn"></div>
+    </div>
+    <div class="xys f1">
+      <!-- 内容栏-->
+      <div class="xysn"></div>
+      <div class="xysn"></div>
+    </div>
   </body>
 </html>
