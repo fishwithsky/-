@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 1px solid black;
+      }
+      body {
+        background-color: #f2f2f2;
+        height: 100vh;
+        background-image: url( "https://pic1.imgdb.cn/item/6773a2fdd0e0a243d4ed077b.jpg" );
+        background-position: bottom;
+      }
+      .f {
+        display: flex;
+      }
+      .f1 {
+        flex: 1;
+      }
+      .fl {
+        flex-direction: column;
+      }
+      .cen {
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body class="f fl">
+    <div style="flex: 1; justify-content: center" class="cen f fl">
+      <div
+        style="
+          width: 100px;
+          height: 100px;
+          margin-bottom: 20px;
+
+          background-color: rgba(211, 211, 211, 0.5);
+          border-radius: 50%;
+        "
+      ></div>
+      <div
+        style="
+          width: 200px;
+          height: 100px;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      >
+        <input
+          placeholder="请写下最重要的事情"
+          type="text"
+          style="background-color: rgba(211, 211, 211, 0)"
+          id="shuRu"
+        />
+        <button
+          onclick="change()"
+          id="anniu"
+          style="background-color: rgba(211, 211, 211, 0)"
+        >
+          ✓
+        </button>
+      </div>
+    </div>
+    <div style="flex: 2; flex-wrap: wrap; overflow: auto" class="f">
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+      <div
+        style="
+          margin: 10px;
+          height: 100px;
+          width: 100px;
+          background-color: white;
+          margin-right: 12vh;
+          background-color: rgba(211, 211, 211, 0.5);
+        "
+      ></div>
+    </div>
+    <script>
+      let ss = false;
+      function change() {
+        let shuru = document.getElementById("shuRu");
+        let anniu = document.getElementById("anniu");
+        if (ss) {
+          ss = false;
+          anniu.innerText = "✓";
+          shuru.readOnly = false;
+          shuru.value = "";
+          window.localStorage.removeItem("ss");
+        } else {
+          ss = true;
+          anniu.innerText = "✗";
+          shuru.readOnly = true;
+          window.localStorage.setItem("ss", shuru.value);
+        }
+        console.log(ss);
+      }
+      let data = window.localStorage.getItem("ss");
+      if (data) {
+        document.getElementById("shuRu").value = data;
+        change();
+      }
+    </script>
+  </body>
+</html>
